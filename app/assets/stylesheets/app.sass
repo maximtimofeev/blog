@@ -1,0 +1,45 @@
+* 
+  box-sizing: border-box
+html, body
+  min-height: 100vh
+  margin: 0
+
+div,html,body,nav,header,hgroup,footer,section,article,main,.container
+  position: relative
+  display: flex
+  flex-direction: column
+  flex-shrink: 0
+a
+  color: inherit
+body
+  align-items: center
+
+  header, footer
+    align-items: center
+    background-color: #fafbfc
+  main
+    flex: 1   
+  .container
+    flex: 1
+    width: 1000px
+  article
+    flex: 1
+    padding: 20px 0 0 10px
+    background-color: #e9edf4
+
+nav
+  flex-direction: row
+
+  li
+    padding: 10px 20px
+    color: #ffffff
+    background-color: #cc0000
+    border: 1px solid #000000
+    border-right-width: 0
+
+    &:last-child
+      border-right-width: 1px
+
+footer
+  .copyright
+    padding: 10px 20px
