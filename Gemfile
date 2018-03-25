@@ -15,7 +15,6 @@ gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem "slim-rails"
-gem 'normalize-rails'
 
 gem 'populator'
 gem 'faker'
