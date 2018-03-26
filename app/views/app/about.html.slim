@@ -1,9 +1,9 @@
 article
-  = 'This is \"about me\" page'
+  = 'This is \'about me\' page'
   section
     = 'Posts by moderators'
-  - User.where(moderator: true).map do |user|
-    ul class='posts'
-      - user.posts.each do |post|
-        li class='post'
-          = post.inspect
+    - User.where(moderator: true).map do |user|
+      ul class='posts'
+        - user.posts.each do |post|
+          li class='post'
+            = post.inspect

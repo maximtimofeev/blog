@@ -22,11 +22,13 @@ hash_posts = 20.times.map do
 end
 
 posts = Post.create! hash_posts
-hash_comments = 200.times.map do
+hash_commentaries = 200.times.map do
+  commentable = ((rand(2) == 1) ? posts : users).sample
   {
     body: Faker::Hipster.paragraphs,
     user: users.sample,
-    post: posts.sample
-      }
+    commentable_id: commentable.id,
+    commentable_type: commentable.class.to_s
+  }
 end
-Comment.create! hash_comments
+Comment.create! hash_commentaries
