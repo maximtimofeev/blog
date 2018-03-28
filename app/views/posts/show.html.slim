@@ -22,7 +22,9 @@ p
 p
   strong Comments:
   table
-    - @post.comments.order(:created_at).each do |comment|
+    - @comments.each do |comment|
       tr
         td: b = comment.user.name
         td = comment.body
+  p
+    = paginate @comments
