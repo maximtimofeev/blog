@@ -1,0 +1,21 @@
+h1 Listing posts
+
+table
+  thead
+    tr
+      th Title
+      th Body
+      th User
+      th Visible
+      th
+      th
+      th
+
+  tbody
+    - @posts.each do |post|
+      = render partial: 'post', collection: @posts
+
+p
+  = link_to 'New Post', new_post_path
+p
+  = paginate @posts
