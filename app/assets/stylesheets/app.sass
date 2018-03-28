@@ -4,13 +4,15 @@ html, body
   min-height: 100vh
   margin: 0
 
-div,html,body,nav,header,hgroup,footer,section,article,main,.container
+div,html,body,nav,header,hgroup,footer,section,article,main
   position: relative
   display: flex
   flex-direction: column
   flex-shrink: 0
 a
   color: inherit
+  &:hover
+    color: #cc0000
 body
   align-items: center
 
@@ -26,6 +28,8 @@ body
     flex: 1
     padding: 20px 0 0 10px
     background-color: #e9edf4
+  h1
+    font-size: 32px
 
 nav
   flex-direction: row
@@ -39,6 +43,9 @@ nav
 
     &:last-child
       border-right-width: 1px
+    a
+      &:hover
+        color: #ffffff
 
 footer
   .copyright
