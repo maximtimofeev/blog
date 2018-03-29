@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'app#index'
 
   get 'posts/page/(:page(.:format))', to: 'posts#index'
+  get 'users/page/(:page(.:format))', to: 'users#index'
   
   get 'app/index'
   get 'app/about'

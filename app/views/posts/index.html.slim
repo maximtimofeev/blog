@@ -3,7 +3,7 @@ article class="posts-list"
     = 'Blog posts'
   - @posts.each do |post|
     = render partial: 'post', collection: @posts
-p
-  = link_to 'New Post', new_post_path
-p
-  = paginate @posts
+  p
+    = link_to 'New Post', new_post_path
+  p
+    = paginate @posts
