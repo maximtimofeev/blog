@@ -2,7 +2,7 @@
 
   .post
     box-sizing: border-box
-    padding: 10px 0
+    margin: 0 0 10px 0
     border-bottom: 1px solid #000000
 
     &-title
@@ -23,22 +23,25 @@
         &-title
           margin-right: 10px
 
-    .post-manage
-      flex-direction: row
-
-      &-item
-        margin: 0 10px
-
-        &:first-child
-          margin-left: 0
-        &:last-child
-          margin-right: 0
   .post-comments
 
     .post-comment
       flex-direction: row
+      margin-bottom: 20px
 
       .comment-author
-        width: 10%
+        width: 20%
       .comment-body
         flex: 1
+
+.post-manage
+  flex-direction: row
+  margin-bottom: 10px
+
+  &-item
+    margin: 0 10px
+
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
