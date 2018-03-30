@@ -16,7 +16,7 @@ creators = User.where(creator: true)
 hash_posts = 20.times.map do
   {
     title: Faker::Hipster.paragraph,
-    body: Faker::Hipster.paragraphs,
+    body: Faker::Hipster.paragraph,
     user: creators.sample
   }
 end
@@ -25,7 +25,7 @@ posts = Post.create! hash_posts
 hash_commentaries = 200.times.map do
   commentable = ((rand(2) == 1) ? posts : users).sample
   {
-    body: Faker::Hipster.paragraphs,
+    body: Faker::Hipster.paragraph,
     user: users.sample,
     commentable_id: commentable.id,
     commentable_type: commentable.class.to_s

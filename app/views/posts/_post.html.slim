@@ -6,10 +6,11 @@ section class="post"
     div class="post-date"
       = "Date: #{post.created_at.strftime("%Y-%m-%d")}"
     div class="post-user"
-      = "Author: #{link_to post.user.name, post.user}".html_safe
+      span[class="post-user-title"] Author:
+      = link_to post.user.name, post.user
   div class="post-manage"
-    = link_to 'Show', post
+    = link_to 'Show', post, :class => "post-manage-item"
     = '|'
-    = link_to 'Edit', edit_post_path(post)
+    = link_to 'Edit', edit_post_path(post), :class => "post-manage-item"
     = '|'
-    = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete
+    = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete, :class => "post-manage-item"
