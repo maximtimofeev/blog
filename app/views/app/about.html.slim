@@ -3,7 +3,7 @@ article
   section
     = 'Posts by moderators'
     - User.where(moderator: true).map do |user|
-      ul class='posts'
+      ul.posts
         - user.posts.each do |post|
-          li class='post'
+          li.post
             = post.inspect

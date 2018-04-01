@@ -1,47 +1,33 @@
-.posts-list
+.post
+  box-sizing: border-box
+  margin: 0 0 10px 0
+  border-bottom: 1px solid #000000
 
-  .post
-    box-sizing: border-box
-    margin: 0 0 10px 0
-    border-bottom: 1px solid #000000
+  &-title
+    font-size: 24px
+    margin-bottom: 20px
 
-    &-title
-      font-size: 24px
-      margin-bottom: 20px
+  &-body
+    margin-bottom: 20px
 
-    &-body
-      margin-bottom: 20px
+  &-info
+    flex-direction: row
+    justify-content: space-between
+    margin-bottom: 10px
 
-    &-info
+    .post-user
       flex-direction: row
-      justify-content: space-between
-      margin-bottom: 10px
 
-      .post-user
-        flex-direction: row
+      &-title
+        margin-right: 10px
 
-        &-title
-          margin-right: 10px
+.post-comments
 
-  .post-comments
+  .post-comment
+    flex-direction: row
+    margin-bottom: 20px
 
-    .post-comment
-      flex-direction: row
-      margin-bottom: 20px
-
-      .comment-author
-        width: 20%
-      .comment-body
-        flex: 1
-
-.post-manage
-  flex-direction: row
-  margin-bottom: 10px
-
-  &-item
-    margin: 0 10px
-
-    &:first-child
-      margin-left: 0
-    &:last-child
-      margin-right: 0
+    .comment-author
+      width: 20%
+    .comment-body
+      flex: 1

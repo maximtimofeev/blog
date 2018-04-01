@@ -1,2 +1,16 @@
-div class='container'
+.container
+  .header-top
+    ul.authenticate-block
+      - if user_signed_in?
+        li
+          span Hello, #{current_user.email}
+        li.model-manage
+          = link_to 'Log out', destroy_user_session_path, method: :delete, :class => "model-manage-item"
+          = '|'
+          = link_to 'My profile', edit_user_path(current_user), :class => "model-manage-item"
+      - else
+        li.model-manage
+          = link_to 'Log in', new_user_session_path, :class => "model-manage-item"
+          = link_to 'Register', new_user_registration_path, :class => "model-manage-item"
+          
   = render '/app/menu'

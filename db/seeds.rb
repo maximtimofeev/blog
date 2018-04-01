@@ -3,9 +3,11 @@ Post.destroy_all
 User.destroy_all
 
 hash_users = 10.times.map do
+  email = Faker::Internet.safe_email
   {
-  name: Faker::Internet.user_name[0...16],
-  email: Faker::Internet.safe_email
+    name: Faker::Internet.user_name[0...16],
+    email: email,
+    password: email
   }
 end
 users = User.create! hash_users

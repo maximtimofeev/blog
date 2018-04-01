@@ -2,7 +2,9 @@ h1 Editing user
 
 == render 'form'
 
-=> link_to 'Show', @user
-'|
-=< link_to 'Back', users_path
+.model-manage
+
+  = link_to 'Show', @user, :class => "model-manage-item"
+  = '|'
+  = link_to 'Back', users_path, :class => "model-manage-item"
 

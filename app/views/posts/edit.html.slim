@@ -2,7 +2,7 @@ h1 Editing post
 
 == render 'form', post: @post
 
-=> link_to 'Show', @post
-'|
-=< link_to 'Back', posts_path
-
+.model-manage
+  = link_to 'Show', @post, :class => "model-manage-item"
+  = '|'
+  = link_to 'Back', posts_path, :class => "model-manage-item"

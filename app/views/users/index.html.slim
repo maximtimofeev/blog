@@ -1,23 +1,29 @@
-h1 Listing users
+article
+  h1.page-header Registered users
 
-table
-  thead
-    tr
-      th Name
-      th Email
-      th Moderator
-      th Creator
-      th Banned
-      th
-      th
-      th
+  table.users-table
+    thead
+    - if user_signed_in? 
+      tr
+        th Name
+        th Email
+        th Moderator
+        th Creator
+        th Banned
+        th[colspan="3"] Manage
+    - else
+      tr
+        th Name
+        th Email
+        th Moderator
+        th Creator
+        th Banned
 
-  tbody
-    - @users.each do |user|
-      = render partial: 'user', collection: @users 
-p
-= paginate @users
+    tbody
+      - @users.each do |user|
+        = render partial: 'user', collection: @users 
+  p
+  = paginate @users
 
-br
-
-= link_to 'New User', new_user_path
+  .model-manage
+    = link_to 'New User', new_user_path, :class => "model-manage-item"

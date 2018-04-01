@@ -10,7 +10,13 @@ html
     header
       = render '/app/header'
     main
-      div class='container'
+      .container
+        .notice-container
+          p.notice
+            = notice
+          p.alert
+            = alert
+
         = yield
     footer
       = render '/app/footer'

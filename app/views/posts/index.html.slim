@@ -1,10 +1,10 @@
-article class="posts-list"
-  h1 class="page-header"
+article.posts-list
+  h1.page-header
     = 'Blog posts'
   - @posts.each do |post|
     = render partial: 'post', collection: @posts
-
-  div class="post-manage"
-    = link_to 'New Post', new_post_path, :class => "post-manage-item"
+- if user_signed_in?
+  .model-manage
+    = link_to 'New Post', new_post_path, :class => "model-manage-item"
   p
     = paginate @posts
