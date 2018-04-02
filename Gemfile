@@ -19,8 +19,12 @@ gem "slim-rails"
 gem 'populator'
 gem 'faker'
 
+gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'kaminari'
 gem 'devise'
+
+gem 'omniauth-vkontakte'
+gem 'recaptcha', '~> 4.7'
 
 gem 'pry'
 # Use Uglifier as compressor for JavaScript assets

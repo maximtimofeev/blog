@@ -1,0 +1,2 @@
+module Devise::OmniauthCallbacksControllerHelper
+end

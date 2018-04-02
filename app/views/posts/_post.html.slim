@@ -8,10 +8,10 @@ section.post
     .post-user
       span.post-user-title Author:
       = link_to post.user.name, post.user
-- if user_signed_in?
-  .model-manage
-    = link_to 'Show', post, :class => "model-manage-item"
-    = '|'
-    = link_to 'Edit', edit_post_path(post), :class => "model-manage-item"
-    = '|'
-    = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete, :class => "model-manage-item"
+  - if user_signed_in?
+    .model-manage
+      = link_to 'Show', post, :class => "model-manage-item"
+      = '|'
+      = link_to 'Edit', edit_post_path(post), :class => "model-manage-item"
+      = '|'
+      = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete, :class => "model-manage-item"
