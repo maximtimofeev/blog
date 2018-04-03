@@ -12,5 +12,6 @@
         li.model-manage
           = link_to 'Log in', new_user_session_path, :class => "model-manage-item"
           = link_to 'Register', new_user_registration_path, :class => "model-manage-item"
+          = link_to "Sign in with VK", user_vkontakte_omniauth_authorize_path, :class => "model-manage-item"
           
   = render '/app/menu'
