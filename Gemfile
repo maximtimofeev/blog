@@ -19,6 +19,8 @@ gem "slim-rails"
 gem 'populator'
 gem 'faker'
 
+gem 'webpacker'
+
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'kaminari'
 gem 'devise'
