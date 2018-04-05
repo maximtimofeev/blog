@@ -1,0 +1,9 @@
+@import 'bootstrap';
+@import 'application.css';
+@import 'app.css';
+@import 'scaffolds.css';
+@import 'posts.css';
+@import 'users.css';
+body {
+  background: #cccccc;
+}

@@ -4,20 +4,19 @@ html
     title
       | Blog
     = csrf_meta_tags
-    = stylesheet_pack_tag 'application', media: 'all'
+    = stylesheet_pack_tag 'application'
     
   body
-    header
+    header.container
       = render '/app/header'
-    main
-      .container
-        .notice-container
-          p.notice
-            = notice
-          p.alert
-            = alert
+    main.container
+      .notice-container
+        p.notice
+          = notice
+        p.alert
+          = alert
 
-        = yield
-    footer
+      = yield
+    footer.container
       = render '/app/footer'
       = javascript_pack_tag 'application'

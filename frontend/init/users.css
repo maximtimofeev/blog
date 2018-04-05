@@ -1,0 +1,11 @@
+.users-table {
+  margin-bottom: 10px;
+  background: #ffddaa; }
+  .users-table td, .users-table th {
+    border: 1px solid #000000;
+    text-align: center; }
+
+form {
+  margin-bottom: 10px; }
+  form .field {
+    margin-bottom: 20px; }

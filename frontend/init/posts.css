@@ -1,0 +1,25 @@
+.post {
+  box-sizing: border-box;
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid #000000; }
+  .post-title {
+    font-size: 24px;
+    margin-bottom: 20px; }
+  .post-body {
+    margin-bottom: 20px; }
+  .post-info {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px; }
+    .post-info .post-user {
+      flex-direction: row; }
+      .post-info .post-user-title {
+        margin-right: 10px; }
+
+.post-comments .post-comment {
+  flex-direction: row;
+  margin-bottom: 20px; }
+  .post-comments .post-comment .comment-author {
+    width: 20%; }
+  .post-comments .post-comment .comment-body {
+    flex: 1; }
